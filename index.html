@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>安部悠斗、SONY MUSICからデビュー決定！</title>
     <style>
+        /* 背景にグラデーション */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #f8f8f8;
+            background: linear-gradient(135deg, #f06, #8e44ad); /* グラデーション */
+            color: #fff;
         }
+
         h1 {
             text-align: center;
-            color: #333;
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+            animation: fadeIn 2s ease-out;
         }
+
+        /* 画像のホバー効果 */
         .image-placeholder {
             width: 100%;
             height: 300px;
@@ -27,16 +35,72 @@
             font-size: 18px;
             color: #666;
             margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
         }
+
+        .image-placeholder img {
+            width: 300px;
+            height: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        /* 内容のボックス */
         .content {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明 */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 3s ease-out;
         }
+
         .highlight {
             font-weight: bold;
             color: #d32f2f;
+        }
+
+        /* アニメーション */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ボタンスタイル */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f06;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #8e44ad;
+        }
+
+        /* リストアイテム */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -47,8 +111,7 @@
     <div class="image-placeholder">
         <img
           src="images/IMG_3886.jpeg"
-          alt="abe picture" 
-          width="300" height="500"
+          alt="abe picture"
         />
     </div>
 
@@ -67,6 +130,9 @@
         <p>安部悠斗のデビュー曲は「<span class="highlight">さよならエナジー</span>」。心に響くメロディと、切ない歌詞が特徴の一曲となっており、彼の音楽の世界観を象徴する楽曲に仕上がっている。</p>
         
         <p>音楽業界に新たな風を吹き込む安部悠斗の活躍に注目だ！</p>
+        
+        <!-- ボタンの追加 -->
+        <a href="#" class="btn">今すぐチェック！</a>
     </div>
 
 </body>
